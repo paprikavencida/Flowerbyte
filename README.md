@@ -5,7 +5,6 @@ A personal link hub by Chroma Flower, created to organize social media, projects
 ### Built with
 - HTML
 - CSS
-- JavaScript
 
 ---
 
