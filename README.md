@@ -11,4 +11,4 @@ A personal link hub by Chroma Flower, created to organize social media, projects
 
 ---
 
-Part of Chroma Flower.
+*Part of Chroma Flower.*
