@@ -281,3 +281,113 @@ footer {
 .discography .panel span {
   overflow-wrap: anywhere;
 }
+
+
+
+/* PORTFOLIO INTRO */
+
+.portfolio-intro {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* LINKS */
+
+.portfolio-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.portfolio-links a {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid var(--preto);
+  color: var(--preto);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.portfolio-links a:hover {
+  background-color: var(--preto);
+  color: var(--branco);
+}
+
+/* PORTFOLIO SECTIONS */
+
+.portfolio-section {
+  margin-bottom: 40px;
+}
+
+.portfolio-section h2 {
+  margin-bottom: 8px;
+}
+
+.portfolio-section > p {
+  margin-bottom: 18px;
+}
+
+/* PORTFOLIO GRID */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: 20px 14px;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.portfolio-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border: 1px solid var(--preto);
+  transition: opacity 0.2s ease;
+}
+
+.portfolio-item:hover img {
+  opacity: 0.75;
+}
+
+.portfolio-item span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.portfolio-item p {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+/* RESPONSIVE — TABLETS */
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* RESPONSIVE — CELULARES */
+
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
