@@ -13,6 +13,11 @@
   box-sizing: border-box;
 }
 
+
+/* =================================
+   02. ESTRUTURA GERAL
+================================= */
+
 body {
   margin: 0;
   padding: 32px 20px;
@@ -40,15 +45,6 @@ main {
   background-color: transparent;
 }
 
-.img {
-  display: block;
-  width: 220px;
-  max-width: 60%;
-  height: auto;
-
-  margin: 0 auto 28px;
-}
-
 h1 {
   margin: 0 0 12px;
 
@@ -57,122 +53,15 @@ h1 {
   overflow-wrap: anywhere;
 }
 
-.page > p {
-  margin: 0 0 28px;
-  font-size: 18px;
-}
 
-.social {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-
-  margin-bottom: 32px;
-}
-
-.social a {
-  color: var(--preto);
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.social a:hover {
-  color: var(--vermelho);
-}
-
-/* Grid de botões: 3 colunas x 3 linhas */
-
-.panel {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  width: 100%;
-}
-
-.panel a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 76px;
-  padding: 16px 10px;
-
-  border: 1px solid var(--preto);
-  background-color: transparent;
-  color: var(--preto);
-
-  font-size: 15px;
-  text-align: center;
-  text-decoration: none;
-
-  overflow-wrap: anywhere;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.panel a:hover {
-  background-color: var(--vermelho);
-  color: var(--branco);
-}
-
-.panel a:focus-visible,
-.social a:focus-visible {
-  outline: 2px solid var(--vermelho);
-  outline-offset: 4px;
-}
-
-footer {
-  margin-top: 24px;
-  font-size: 13px;
-}
-
-/* Ajustes para telas menores */
-
-@media (max-width: 600px) {
-  body {
-    padding: 16px 12px;
-  }
-
-  .page {
-    padding: 32px 16px;
-  }
-
-  .img {
-    width: 170px;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  .page > p {
-    font-size: 16px;
-  }
-
-  .social {
-    gap: 10px 16px;
-  }
-
-  .panel {
-    gap: 10px;
-  }
-
-  .panel a {
-    min-height: 64px;
-    padding: 12px 6px;
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 360px) {
-  .panel {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
+/* =================================
+   03. CABEÇALHO
+================================= */
 
 .header {
   width: 100%;
   padding: 16px 20px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,26 +96,93 @@ footer {
   opacity: 0.6;
 }
 
-@media (max-width: 480px) {
-  .header {
-    padding: 14px 10px;
-  }
 
-  .header-nav {
-    gap: 8px;
-    font-size: 12px;
-  }
+/* =================================
+   04. PÁGINA INICIAL
+================================= */
+
+.img {
+  display: block;
+  width: 220px;
+  max-width: 60%;
+  height: auto;
+
+  margin: 0 auto 28px;
 }
 
-/* Mobile */
-@media (max-width: 480px) {
-  .discography .panel {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.page > p {
+  margin: 0 0 28px;
+  font-size: 18px;
+}
+
+/* Redes sociais */
+
+.social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+
+  margin-bottom: 32px;
+}
+
+.social a {
+  color: var(--preto);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.social a:hover {
+  color: var(--vermelho);
+}
+
+/* Grade de botões */
+
+.panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+}
+
+.panel a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 76px;
+  padding: 16px 10px;
+
+  border: 1px solid var(--preto);
+  background-color: transparent;
+  color: var(--preto);
+
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.panel a:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+}
+
+/* Foco de acessibilidade */
+
+.panel a:focus-visible,
+.social a:focus-visible {
+  outline: 2px solid var(--vermelho);
+  outline-offset: 4px;
 }
 
 
-/* CONTACT PAGE */
+/* =================================
+   05. PÁGINA DE CONTATO
+================================= */
+
 .contact-page {
   text-align: left;
 }
@@ -253,7 +209,9 @@ footer {
 }
 
 
-/* DISCOGRAPHY */
+/* =================================
+   06. DISCOGRAFIA
+================================= */
 
 .discography .panel {
   display: grid;
@@ -266,6 +224,7 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+
   text-align: left;
   min-width: 0;
 }
@@ -275,6 +234,7 @@ footer {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+
   border: 1px solid var(--preto);
 }
 
@@ -283,15 +243,18 @@ footer {
 }
 
 
+/* =================================
+   07. PORTFÓLIO
+================================= */
 
-/* PORTFOLIO INTRO */
+/* Introdução */
 
 .portfolio-intro {
   margin-bottom: 40px;
   text-align: center;
 }
 
-/* LINKS */
+/* Links */
 
 .portfolio-links {
   display: flex;
@@ -299,14 +262,17 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
+
   margin-top: 20px;
 }
 
 .portfolio-links a {
   display: inline-block;
   padding: 8px 12px;
+
   border: 1px solid var(--preto);
   color: var(--preto);
+
   text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -316,7 +282,7 @@ footer {
   color: var(--branco);
 }
 
-/* PORTFOLIO SECTIONS */
+/* Seções */
 
 .portfolio-section {
   margin-bottom: 40px;
@@ -330,7 +296,7 @@ footer {
   margin-bottom: 18px;
 }
 
-/* PORTFOLIO GRID */
+/* Grade de projetos */
 
 .portfolio-grid {
   display: grid;
@@ -344,7 +310,9 @@ footer {
   flex-direction: column;
   align-items: stretch;
   gap: 8px;
+
   min-width: 0;
+
   color: inherit;
   text-decoration: none;
 }
@@ -355,6 +323,7 @@ footer {
   height: auto;
   aspect-ratio: auto;
   object-fit: contain;
+
   border: 1px solid var(--preto);
   transition: opacity 0.2s ease;
 }
@@ -371,29 +340,19 @@ footer {
 
 .portfolio-item p {
   margin: 0;
+
   font-size: 0.8rem;
   line-height: 1.4;
   overflow-wrap: anywhere;
 }
 
-/* RESPONSIVE — TABLETS */
 
-@media (max-width: 768px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
+/* =================================
+   08. SETUP
+================================= */
 
-/* RESPONSIVE — CELULARES */
+/* Introdução */
 
-@media (max-width: 480px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-
-/* SETUP INTRO */
 .setup-intro {
   margin-bottom: 40px;
 }
@@ -411,7 +370,8 @@ footer {
   color: #777;
 }
 
-/* SETUP SECTIONS */
+/* Seções */
+
 .setup-section {
   margin-bottom: 40px;
 }
@@ -425,10 +385,12 @@ footer {
   margin-bottom: 18px;
 }
 
-/* HARDWARE LIST */
+/* Lista de equipamentos */
+
 .setup-list {
   display: flex;
   flex-direction: column;
+
   border-top: 1px solid var(--borda);
 }
 
@@ -437,8 +399,10 @@ footer {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+
   padding: 12px 0;
   border-bottom: 1px solid var(--borda);
+
   font-size: 0.85rem;
 }
 
@@ -451,7 +415,8 @@ footer {
   font-weight: 600;
 }
 
-/* SOFTWARE GRID */
+/* Grade de programas */
+
 .software-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -463,8 +428,10 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   gap: 8px;
+
   min-height: 75px;
   padding: 12px;
+
   border: 1px solid var(--preto);
 }
 
@@ -477,37 +444,23 @@ footer {
   color: #777;
 }
 
-/* SETUP NOTE */
+/* Observação final */
+
 .setup-note {
   padding-top: 18px;
   border-top: 1px solid var(--borda);
+
   font-size: 0.8rem;
   color: #777;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .software-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .setup-item {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .setup-item strong {
-    text-align: left;
-  }
-}
-
 
 /* =================================
-   HOME SERVER
+   09. HOME SERVER
 ================================= */
 
-/* INTRODUÇÃO */
+/* Introdução */
+
 .server-intro {
   margin-bottom: 40px;
 }
@@ -526,7 +479,8 @@ footer {
   color: #777;
 }
 
-/* SEÇÕES */
+/* Seções */
+
 .server-section {
   margin-bottom: 40px;
 }
@@ -537,14 +491,17 @@ footer {
 
 .server-section > p {
   margin-bottom: 18px;
+
   font-size: 0.85rem;
   line-height: 1.5;
 }
 
-/* VISÃO GERAL */
+/* Visão geral */
+
 .server-overview {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   border-top: 1px solid var(--borda);
   border-left: 1px solid var(--borda);
 }
@@ -553,7 +510,9 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 6px;
+
   padding: 14px;
+
   border-right: 1px solid var(--borda);
   border-bottom: 1px solid var(--borda);
 }
@@ -569,10 +528,12 @@ footer {
   overflow-wrap: anywhere;
 }
 
-/* LISTAS DE HARDWARE E INFRAESTRUTURA */
+/* Listas de hardware e infraestrutura */
+
 .server-list {
   display: flex;
   flex-direction: column;
+
   border-top: 1px solid var(--borda);
 }
 
@@ -581,8 +542,10 @@ footer {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+
   padding: 13px 0;
   border-bottom: 1px solid var(--borda);
+
   font-size: 0.85rem;
 }
 
@@ -596,7 +559,8 @@ footer {
   overflow-wrap: anywhere;
 }
 
-/* SERVIÇOS */
+/* Serviços */
+
 .server-services {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -607,9 +571,11 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 14px;
-  border: 1px solid var(--preto);
+
   min-width: 0;
+  padding: 14px;
+
+  border: 1px solid var(--preto);
   transition: background-color 0.2s ease;
 }
 
@@ -631,24 +597,30 @@ footer {
 
 .server-service p {
   margin: 0;
+
   font-size: 0.8rem;
   line-height: 1.5;
   color: #666;
 }
 
-/* STATUS DOS SERVIÇOS */
+/* Status dos serviços */
+
 .server-status {
   padding: 4px 7px;
+
   border: 1px solid var(--borda);
+
   font-size: 0.65rem;
   color: #777;
   text-transform: lowercase;
 }
 
-/* HISTÓRICO */
+/* Histórico de atualizações */
+
 .server-changelog {
   display: flex;
   flex-direction: column;
+
   border-top: 1px solid var(--borda);
 }
 
@@ -656,6 +628,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 6px;
+
   padding: 13px 0;
   border-bottom: 1px solid var(--borda);
 }
@@ -670,20 +643,116 @@ footer {
   font-weight: 500;
 }
 
-/* OBSERVAÇÃO FINAL */
+/* Observação final */
+
 .server-note {
   padding-top: 18px;
   border-top: 1px solid var(--borda);
+
   font-size: 0.8rem;
   line-height: 1.5;
   color: #777;
 }
 
+
 /* =================================
-   RESPONSIVIDADE
+   10. RODAPÉ
 ================================= */
 
+footer {
+  margin-top: 24px;
+  font-size: 13px;
+}
+
+
+/* =================================
+   11. RESPONSIVIDADE
+================================= */
+
+/* Tablets */
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Celulares */
+
 @media (max-width: 600px) {
+
+  /* Estrutura geral */
+
+  body {
+    padding: 16px 12px;
+  }
+
+  .page {
+    padding: 32px 16px;
+  }
+
+  /* Página inicial */
+
+  .img {
+    width: 170px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .page > p {
+    font-size: 16px;
+  }
+
+  .social {
+    gap: 10px 16px;
+  }
+
+  .panel {
+    gap: 10px;
+  }
+
+  .panel a {
+    min-height: 64px;
+    padding: 12px 6px;
+    font-size: 13px;
+  }
+
+  /* Cabeçalho */
+
+  .header {
+    padding: 14px 10px;
+  }
+
+  .header-nav {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  /* Portfólio */
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Setup */
+
+  .software-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .setup-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .setup-item strong {
+    text-align: left;
+  }
+
+  /* Home Server */
 
   .server-overview {
     grid-template-columns: 1fr;
@@ -702,5 +771,20 @@ footer {
   .server-item strong {
     text-align: left;
   }
+}
 
+/* Telas pequenas */
+
+@media (max-width: 480px) {
+  .discography .panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Telas muito pequenas */
+
+@media (max-width: 360px) {
+  .panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
