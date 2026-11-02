@@ -1,4 +1,4 @@
-# flowerbyte
+# Flowerbyte v1.0
 
 A personal digital space for my projects, creative work, and everything I build along the way.
 
